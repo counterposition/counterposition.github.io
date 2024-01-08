@@ -1,0 +1,26 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<h1>Hi, I'm Harish</h1>
+			<p>
+				Zookeepers want me, computers fear me.
+			</p>
+			<p>
+				You can find me on <a href="https://www.linkedin.com/in/harish-kukreja/" target="_blank">LinkedIn</a> and <a href="https://github.com/counterposition" target="_blank">GitHub</a>. Or if you'd like to get in touch directly, send me an email at my first name dot last name at gmail.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
