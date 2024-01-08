@@ -1,6 +1,6 @@
 ---
 title: 'Dependency Injection with samber/do'
-description: 'Turning compile-time errors into runtime errors for want of a better framework'
+description: 'Automatically wire up your Go code without using reflection'
 pubDate: 'Jan 08 2024'
 heroImage: '/Go_Logo_LightBlue.png'
 ---
