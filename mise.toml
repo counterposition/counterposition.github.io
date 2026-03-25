@@ -23,6 +23,26 @@ description = "Build the site"
 depends = ["install"]
 run = "pnpm build"
 
+[tasks.lint]
+description = "Lint source files"
+depends = ["install"]
+run = "pnpm lint"
+
+[tasks."lint:fix"]
+description = "Lint source files and apply safe fixes"
+depends = ["install"]
+run = "pnpm lint:fix"
+
+[tasks.format]
+description = "Format supported files with Prettier"
+depends = ["install"]
+run = "pnpm format"
+
+[tasks."format:check"]
+description = "Check formatting with Prettier"
+depends = ["install"]
+run = "pnpm format:check"
+
 [tasks.preview]
 description = "Preview the built site"
 depends = ["build"]
