@@ -7,7 +7,7 @@ heroImage: '/Go_Logo_LightBlue.png'
 
 ## Simple idea, fancy terminology
 
-*Dependency injection* is a $50 term for a $5 concept.
+_Dependency injection_ is a $50 term for a $5 concept.
 In a nutshell, it means **having the caller of a function provide the function’s dependencies** instead of making the function fetch its dependencies on its own.
 
 Rather than using cars and engines or espresso machines and coffee beans, let’s use a realistic example to demonstrate the idea:
@@ -79,7 +79,7 @@ In practice, the term implicitly includes the idea of a dependency injection fra
 - supports generics
 - easy to debug
 
-Let’s build a simple application using *samber/do*.
+Let’s build a simple application using _samber/do_.
 
 ## The magic box
 
@@ -120,7 +120,7 @@ func main() {
 }
 ```
 
-*samber/do* can automatically wire up dependencies if functions have the signature `func [T] (*do.Injector) (T, error)`, where `T` is any interface or concrete type.
+_samber/do_ can automatically wire up dependencies if functions have the signature `func [T] (*do.Injector) (T, error)`, where `T` is any interface or concrete type.
 Such functions are called providers.
 `do.Injector` is struct returned by `do.New`.
 
@@ -266,16 +266,16 @@ Certain kinds of mistakes can happen when working with dependency injection fram
 - using a provider that has an incorrect return type (e.g. it returns a struct instead of an interface the struct implements)
 - using multiple providers with the same return type, without using `ProvideNamed` and `InvokeNamed`
 
-The Go compiler cannot catch these errors because *samber/do* resolves dependencies at runtime.
+The Go compiler cannot catch these errors because _samber/do_ resolves dependencies at runtime.
 
 Fortunately, the library provides two functions that can be useful when troubleshooting errors related to dependency injection.
 Use the `ListProvidedServices` and `ListInvokedServices` methods on `Injector` to find the root cause of such errors.
 
 ## But why?
 
-Dependency injection is hugely beneficial for non-trivial applications, but **dependency injection frameworks like *samber/do* turn compile-time errors into runtime errors**.
+Dependency injection is hugely beneficial for non-trivial applications, but **dependency injection frameworks like _samber/do_ turn compile-time errors into runtime errors**.
 This is not intrinsic to all DI frameworks; other languages offer a selection of DI frameworks that resolve dependencies at compile-time.
 Examples include [Micronaut](https://micronaut.io/) and [Dagger 2](https://dagger.dev/) for Java, and [Needle](https://github.com/uber/needle) for Swift.
 
 Some teams find that DI frameworks make complex applications more readable and more easily extendable, enough to offset the loss of compile-time safety.
-If you find this to be true, then give *samber/do* a try!
+If you find this to be true, then give _samber/do_ a try!
