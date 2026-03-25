@@ -18,9 +18,53 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				Zookeepers want me, computers fear me.
 			</p>
 			<p>
-				You can find me on <a href="https://www.linkedin.com/in/harish-kukreja/" target="_blank">LinkedIn</a> and <a href="https://github.com/counterposition" target="_blank">GitHub</a>. Or if you'd like to get in touch directly, send me an email at my first name dot last name at gmail.
+				You can find me on <a href="https://www.linkedin.com/in/harish-kukreja/" target="_blank" rel="noopener noreferrer">LinkedIn</a> and <a href="https://github.com/counterposition" target="_blank" rel="noopener noreferrer">GitHub</a>. Or if you'd like to get in touch directly, send me an email at my first name dot last name at gmail.
 			</p>
+			<section class="feedback-callout" aria-label="Feedback">
+				<p>If we&apos;ve met, I&apos;d value your candid feedback</p>
+				<a
+					class="feedback-link"
+					href="https://tally.so/r/2ELaRj"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Leave anonymous feedback in a new tab"
+				>
+					Leave anonymous feedback
+				</a>
+			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.feedback-callout {
+		margin-top: 2.5rem;
+		padding: 1.25rem 1.5rem;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 12px;
+		background: rgba(255, 255, 255, 0.8);
+		text-align: center;
+	}
+
+	.feedback-callout p {
+		margin: 0 0 1rem;
+	}
+
+	.feedback-link {
+		display: inline-block;
+		padding: 0.75rem 1.1rem;
+		border-radius: 999px;
+		background: var(--accent);
+		color: white;
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	.feedback-link:hover,
+	.feedback-link:focus-visible {
+		background: var(--accent-dark);
+		color: white;
+	}
+
+</style>
