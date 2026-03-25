@@ -1,0 +1,29 @@
+min_version = { soft = "2026.3.15" }
+
+[tools]
+node = "24.14.0"
+pnpm = "10.33.0"
+
+[env]
+_.path = ["{{config_root}}/node_modules/.bin"]
+
+[tasks.install]
+description = "Install JS dependencies"
+run = "pnpm install --frozen-lockfile"
+sources = ["package.json", "pnpm-lock.yaml", "mise.toml"]
+outputs = ["node_modules/.pnpm/lock.yaml"]
+
+[tasks.dev]
+description = "Start Astro dev server"
+depends = ["install"]
+run = "pnpm dev"
+
+[tasks.build]
+description = "Build the site"
+depends = ["install"]
+run = "pnpm build"
+
+[tasks.preview]
+description = "Preview the built site"
+depends = ["build"]
+run = "pnpm preview"
